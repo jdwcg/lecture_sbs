@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css tab menu</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+  </head>
+  <style>
+    body {
+      font-family: pretendard;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .tab_menus {
+      width: 600px;
+    }
+    .tab_menus > section {
+      display: none;
+      color: black;
+      background: white;
+      clear: both;
+      padding: 30px;
+    }
+    .tab_menus > section > h1 {
+      color: darkslateblue;
+    }
+    #chk1:checked + .tab_menu,
+    #chk2:checked + .tab_menu,
+    #chk3:checked + .tab_menu {
+      background: darkslateblue;
+    }
+    #chk1:checked ~ .content1,
+    #chk2:checked ~ .content2,
+    #chk3:checked ~ .content3 {
+      background: #f7f7f7;
+      display: block;
+    }
+    .tab_menus > input[type="radio"] {
+      position: absolute;
+      left: -999px;
+    }
+    .tab_menu {
+      display: inline-block;
+      line-height: 40px;
+      color: white;
+      background: slateblue;
+      cursor: pointer;
+      padding: 0 20px;
+      float: left;
+      width: calc(33.33% - 1px);
+      text-align: center;
+    }
+    .tab_menu:not(:last-child) {
+      margin-right: 1px;
+    }
+  </style>
+  <body>
+    <div class="tab_menus">
+      <input type="radio" name="radio" id="chk1" checked />
+      <label class="tab_menu" for="chk1">WEB</label>
+      <input type="radio" name="radio" id="chk2" />
+      <label class="tab_menu" for="chk2">HTML</label>
+      <input type="radio" name="radio" id="chk3" />
+      <label class="tab_menu" for="chk3">CSS</label>
+      <section class="content1">
+        <h1>web is</h1>
+        <p>
+          WEB is Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Fugiat accusantium facilis nisi error officiis reprehenderit quos
+          ratione eum dolore architecto non et aliquam ea unde tempora,
+          praesentium voluptas consequuntur cupiditate nihil repudiandae.
+          Tempore ab nam suscipit reprehenderit eos, sunt quis.
+        </p>
+      </section>
+      <section class="content2">
+        <h1>html is</h1>
+        <p>
+          HTML5 is Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Fugiat accusantium facilis nisi error officiis reprehenderit quos
+          ratione eum dolore architecto non et aliquam ea unde tempora,
+          praesentium voluptas consequuntur cupiditate nihil repudiandae.
+          Tempore ab nam suscipit reprehenderit eos, sunt quis.
+        </p>
+      </section>
+      <section class="content3">
+        <h1>css is</h1>
+        <p>
+          CSS3 is ipsum dolor, sit amet consectetur adipisicing elit. Fugiat
+          accusantium facilis nisi error officiis reprehenderit quos ratione eum
+          dolore architecto non et aliquam ea unde tempora, praesentium voluptas
+          consequuntur cupiditate nihil repudiandae. Tempore ab nam suscipit
+          reprehenderit eos, sunt quis.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
