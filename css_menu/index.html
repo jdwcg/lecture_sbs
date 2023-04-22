@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+      }
+      .contain {
+      }
+      .contain > ul > li {
+        float: left;
+      }
+      .contain > ul > li > a {
+        background: dodgerblue;
+        color: white;
+        line-height: 50px;
+        height: 50px;
+        width: 100px;
+        display: inline-block;
+      }
+      .contain > ul:hover > li > a ~ ul li {
+        line-height: 50px;
+        height: 50px;
+        font-size: inherit;
+      }
+      .contain > ul > li > ul > li {
+        transition: height 0.3s ease-out;
+        transition-duration: 0.3s;
+        background: #f7f7f7;
+        line-height: 0;
+        height: 0;
+        font-size: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="contain">
+      <ul>
+        <li>
+          <a href="">Design</a>
+          <ul>
+            <li><a href=""> Photoshop</a></li>
+            <li><a href=""> illustrator</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">Web</a>
+          <ul>
+            <li><a href=""> HTML</a></li>
+            <li><a href=""> CSS</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
