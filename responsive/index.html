@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 200, "opsz" 48;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+      }
+      body {
+        font-family: pretendard;
+        background: #f7f7f7;
+      }
+      a {
+        text-decoration: none;
+      }
+      .wrapper {
+        margin: 0 auto;
+        width: 1200px;
+      }
+      .hd {
+        background: white;
+        height: 50px;
+        border-bottom: 1px solid #eee;
+      }
+      .logo {
+        float: left;
+        height: 50px;
+        line-height: 50px;
+        /* border: 1px dashed pink; */
+        padding: 0 20px;
+      }
+      .nav {
+        float: right;
+      }
+      .nav ul li {
+        float: left;
+        /* border: 1px dashed pink; */
+        display: inline-block;
+        line-height: 50px;
+      }
+      .nav .ham > ul > li > a {
+        padding: 0 20px;
+        display: inline-block;
+      }
+      .nav .ham > ul > li > a:hover {
+        transition: 0.3s ease;
+        color: #999;
+      }
+      .ham span {
+        display: none;
+      }
+      .main {
+        clear: both;
+        background: white;
+      }
+      .nav .ham ul li > a > span {
+        float: left;
+        text-align: center;
+        line-height: 50px;
+        height: 50px;
+        /* border: 1px dashed blue; */
+      }
+      @media (max-width: 1200px) {
+        .wrapper,
+        .nav,
+        .nav .ham ul li {
+          width: 100%;
+        }
+        .nav {
+          /* border: 1px dashed blue; */
+        }
+        .nav .ham ul {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s linear;
+          background: white;
+        }
+        .nav .ham > ul > li > a {
+          display: block;
+        }
+        .nav .ham > ul > li > a:hover {
+          background-color: #f5f5f5;
+          transition: 0.3s linear;
+        }
+
+        .nav .ham > ul > li:last-child > a > span {
+          padding: 0 20px;
+        }
+        .ham span {
+          cursor: pointer;
+          font-size: 40px;
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          /* border: 1px dashed blue; */
+          height: 50px;
+          line-height: 50px;
+          padding: 0 20px;
+        }
+        .ham:hover ul {
+          max-height: 100vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="hd">
+        <a href="" class="ham"></a>
+        <div class="logo">WEB</div>
+        <nav class="nav">
+          <div class="ham">
+            <span class="material-symbols-outlined"> menu </span>
+            <ul>
+              <li><a href="">HTML</a></li>
+              <li><a href="">CSS</a></li>
+              <li><a href="">JavScript</a></li>
+              <li><a href="">jQuery</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <main class="main"></main>
+      <footer class="ft"></footer>
+    </div>
+  </body>
+</html>
